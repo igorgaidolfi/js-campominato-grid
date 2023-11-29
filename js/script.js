@@ -5,7 +5,10 @@ function cellMaker(num){
     return element
 }
 const grid = document.getElementById('grid')
-for(let i=0;i<100;i++){
-    let square = cellMaker(i+1)
-    grid.appendChild(square)
-}
+const button = document.getElementById('play')
+button.addEventListener("click", function(){
+    for(let i=0;i<100;i++){
+        let square = cellMaker(i+1)
+        grid.appendChild(square)
+    }
+})
